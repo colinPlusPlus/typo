@@ -415,6 +415,16 @@ class Article < Content
   def access_by?(user)
     user.admin? || user_id == user.id
   end
+  
+  def merge_article(article)
+    self.body += ' ' + article.body
+    article.comments.each do |c|
+      c.article_id = self.id
+      self.comments << c
+    end
+    article.delete
+    self.save
+  end
 
   protected
 

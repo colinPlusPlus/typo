@@ -671,4 +671,16 @@ describe Admin::ContentController do
 
     end
   end
+#   describe 'Merge articles' do
+    
+#     before do
+#       @user = Factory(:user, :profile => Factory(:profile_admin, :label => Profile::ADMIN))
+#       @article1 = Factory(:article)
+#       @article2 = Factory(:article_with_accent_in_html)
+#     end
+    
+#     it 'should merge article with id 1 with article with id 2' do
+#       post 
+#   end
+  
 end
